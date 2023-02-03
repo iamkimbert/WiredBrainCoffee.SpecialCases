@@ -15,8 +15,23 @@ namespace WiredBrainCoffee.SpecialCases
             Console.WriteLine($"Container<bool>: {Container<bool>.InstanceCount}");
             Console.WriteLine($"ContainerBase: {ContainerBase.InstanceCountBase}");
             container.PrintItem("Hello from generic method in generic class");
+            var result = Add(2, 3);
+            Console.WriteLine($"2+3={result}");
+
+            var result2 = Add(2.7, 3.3);
+            Console.WriteLine($"2.7+3.3={result2}");
 
             Console.ReadLine();
+        }
+
+        private static int Add(int x, int y)
+        {
+            return x +y;
+        }
+
+        private static double Add(double x, double y)
+        {
+            return x + y;
         }
     }
     class ContainerBase
